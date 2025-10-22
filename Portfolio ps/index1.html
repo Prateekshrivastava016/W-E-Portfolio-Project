@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ID Selector Demo - Prateek Shrivastava</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ID SELECTORS - Each targets a unique element */
+
+        #main-header {
+            text-align: center;
+            color: #6366f1;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        #subtitle {
+            text-align: center;
+            color: #6b7280;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            font-style: italic;
+        }
+
+        #hero-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        #navigation-bar {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        #primary-button {
+            background: #6366f1;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        #primary-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+        }
+
+        #info-card {
+            background: #f9fafb;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid #6366f1;
+            margin-bottom: 2rem;
+        }
+
+        #highlight-text {
+            color: #dc2626;
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-align: center;
+            padding: 1rem;
+            background: #fee2e2;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        #feature-list {
+            list-style: none;
+            padding: 2rem;
+            background: #eff6ff;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        #feature-list li {
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            background: white;
+            border-radius: 5px;
+            border-left: 3px solid #3b82f6;
+        }
+
+        #stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        #footer-section {
+            text-align: center;
+            padding: 2rem;
+            background: #1f2937;
+            color: white;
+            border-radius: 10px;
+            margin-top: 3rem;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .nav-link {
+            padding: 0.8rem 1.5rem;
+            background: #f3f4f6;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #1f2937;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            background: #6366f1;
+            color: white;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: #10b981;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .back-home:hover {
+            background: #059669;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="main-header">CSS ID Selector Demo</h1>
+        <p id="subtitle">Demonstrating 10 unique ID selectors with distinct styling</p>
+
+        <div id="hero-box">
+            <h2>Welcome to ID Selectors!</h2>
+            <p>ID selectors target unique elements using the # symbol. Each ID should only be used once per page.</p>
+        </div>
+
+        <nav id="navigation-bar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index2.html" class="nav-link">Class Demo</a>
+            <a href="index3.html" class="nav-link">Tag Demo</a>
+        </nav>
+
+        <button id="primary-button" onclick="alert('This button has ID: primary-button')">Click Me!</button>
+
+        <div id="info-card">
+            <h3>What are ID Selectors?</h3>
+            <p>ID selectors are used to target a single, unique element on the page. They have high specificity and override class and tag selectors. IDs are defined with the # symbol in CSS.</p>
+        </div>
+
+        <p id="highlight-text">This text is styled using #highlight-text ID selector!</p>
+
+        <ul id="feature-list">
+            <li>High specificity in CSS cascade</li>
+            <li>Should be unique per page</li>
+            <li>Perfect for JavaScript targeting</li>
+            <li>Used for landmark elements</li>
+        </ul>
+
+        <div id="stats-container">
+            <div class="stat-box">
+                <h3>10</h3>
+                <p>ID Selectors</p>
+            </div>
+            <div class="stat-box">
+                <h3>100%</h3>
+                <p>Unique</p>
+            </div>
+            <div class="stat-box">
+                <h3>High</h3>
+                <p>Specificity</p>
+            </div>
+        </div>
+
+        <footer id="footer-section">
+            <p>&copy; 2025 Prateek Shrivastava | ID Selector Demonstration</p>
+            <a href="index.html" class="back-home">Back to Portfolio</a>
+        </footer>
+    </div>
+</body>
+</html>
